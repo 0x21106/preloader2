@@ -1,0 +1,69 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgb(149,92,255);
+    overflow:hidden;
+}
+
+html, body{
+    height:100%;
+}
+
+.preloader-container{
+    
+    
+    
+    width:120px; /* CARD Width */
+    height:160px; /* CARD Height */
+    
+    
+    
+    
+    transform-style: preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    transform:rotateY(45deg);
+}
+
+.preloader-container .preloader-content{
+    width:100%;
+    height:100%;
+    transform-style: preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    animation:preloader 2s linear infinite;
+}
+
+.preloader-container .preloader-content span{
+    width:100%;
+    height:100%;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    background:linear-gradient(#fff, #a7a7a7, #fff);
+}
+
+.preloader-container .preloader-content span:nth-child(1){
+    transform:rotateX(0deg);
+}
+
+.preloader-container .preloader-content span:nth-child(2){
+    transform:rotateX(45deg);
+}
+
+.preloader-container .preloader-content span:nth-child(3){
+    transform:rotateX(90deg);
+}
+
+.preloader-container .preloader-content span:nth-child(4){
+    transform:rotateX(135deg);
+}
+
+@keyframes preloader{
+    0%{
+        transform:perspective(1000px) rotateX(0deg);
+    }
+    100%{
+        transform:perspective(1000px) rotateX(-360deg);
+    }
+}
